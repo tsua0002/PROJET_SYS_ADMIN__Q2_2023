@@ -8,7 +8,7 @@ L'idée est de travailler sur **un noeud Bitcoin**. Le réel contexte sera facil
 Du coup, l’idée ça serait de s’intéresser au cas d’un noeud Bitcoin 
 [bitcoin-core](https://bitcoin.org/en/bitcoin-core/). 
 On serait une entreprise qui manage un noeud. Cette entreprise elle doit se rallier à une pool de mining (parce que le but c’est de gagner de l’argent pas aléatoirement, je reviendrai là dessus). Elle peut si c’est plus facile pour nous gérer une pool de mining. 
-Et ce qu’il peut se passer c’est une mise à jour (de type soft fork, https://shardeum.org/blog/hard-fork-vs-soft-fork/) par exemple en 2020-2021 il y a eu la mise à jour Taproot. 
+Et ce qu’il peut se passer c’est une mise à jour (de type soft fork, [https://shardeum.org/](blog/hard-fork-vs-soft-fork/)) par exemple en 2020-2021 il y a eu la mise à jour Taproot. 
 On pourrait alors se poser dans le cas suivant : nous avons déjà un noeud (qui potentiellement gère une pool) et qui doit se mettre à jour  en propageant la mise à jour sur toute la pool.
 Image
 
@@ -16,12 +16,13 @@ Image
 ### Buts
 Ce projet nous permettrait donc :
 - d’apprendre à déployer un noeud complet Bitcoin (Bitcoin core ou autre)  étude de marché possible. 
-- utiliser l’interface ‘bitcoin-cli’ (https://blog.sandipan.dev/bitcoin-cli-playground) 
-- monitorer un noeud et une pool de mining Bitcoin (https://bitcoin.org/en/resources)
+- utiliser l’interface ‘bitcoin-cli’ [bitcoin-cli playground](https://blog.sandipan.dev/bitcoin-cli-playground) 
+- monitorer un noeud et une pool de mining Bitcoin ([bitcoin.org/en/resources](https://bitcoin.org/en/resources))
 - mettre à jour un serveur comme celui-ci ( je n'ai aucune doc à ce sujet par contre)
 
-De plus, il nous faudrait une connaissance de la gestion de périphériques car le but serait de gérer des ASIICs (https://www.baesystems.com/en-us/definition/what-are-asics) en optimisant au mieux la machine (par d'interface graphique).
-Par contre pour prendre l'objet en main il existe des interfaces graphiques comme https://umbrel.com/#start. On peut l'installer sur une machine pour voir ce qu'il se passe et après passer en ligne de commandes.
+De plus, il nous faudrait une connaissance de la gestion de périphériques car le but serait de gérer des ASIICs (voir [What are ASICS ?](https://www.baesystems.com/en-us/definition/what-are-asics)) en optimisant au mieux la machine (pas d'interface graphique).
+Par contre pour prendre l'objet en main il existe des interfaces graphiques comme [Umbrel](https://umbrel.com/#start). 
+On pourrait l'installer sur une machine pour voir ce qu'il se passe et après passer en ligne de commandes.
 
 
 ### Matos actuel
