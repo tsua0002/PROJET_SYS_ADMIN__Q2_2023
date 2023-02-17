@@ -1,7 +1,1 @@
-#! /usr/zsh
-#/PROJET_SYS_ADMIN/script_creation_git.sh
-
-git init \ 
-	  -b dev1 dev2 \ 
-	  --initial-branch=master \
-	  
+git remote add PROJET_SYS_ADMIN__Q2_2023 https://github.com/tsua0002/PROJET_
