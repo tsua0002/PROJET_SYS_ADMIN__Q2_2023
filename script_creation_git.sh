@@ -4,4 +4,4 @@
 git init \ 
 	  -b dev1 dev2 \ 
 	  --initial-branch=master \
-	  PROJET_SYS_ADMIN/
+	  

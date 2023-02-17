@@ -1,4 +1,4 @@
-# Projet Administration Système : Gestion de mise à jour d'un noeud Bitcoin.
+# Idée Projet Administration Système : Gestion de mise à jour d'un noeud Bitcoin.
 ## Cas Pool de mining ?
 
 
@@ -36,8 +36,5 @@ Je suis en train de bosser là dessus mais dès que c'est réglé on a déjà du
 
 Et je pense que ce qui serait intéressant ça serait de louer un espace dans un serveur. Et ça faudrait voir avec le prof comment ça marche justement. Si on a droit à des accès pour nous.
 Car la priorité serait d'avoir une machine sur laquelle on pouvoir faire tout ça et à laquelle on pourra accéder en ssh et passer les commandes que l'on veut.
-
-
-
 
 
