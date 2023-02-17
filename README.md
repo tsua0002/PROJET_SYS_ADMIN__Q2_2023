@@ -8,9 +8,9 @@ L'idée est de travailler sur **un noeud Bitcoin**. Le réel contexte sera facil
 Du coup, l’idée ça serait de s’intéresser au cas d’un noeud Bitcoin 
 [bitcoin-core](https://bitcoin.org/en/bitcoin-core/). 
 On serait une entreprise qui manage un noeud. Cette entreprise elle doit se rallier à une pool de mining (parce que le but c’est de gagner de l’argent pas aléatoirement, je reviendrai là dessus). Elle peut si c’est plus facile pour nous gérer une pool de mining. 
-Et ce qu’il peut se passer c’est une mise à jour (de type soft fork, [https://shardeum.org/](blog/hard-fork-vs-soft-fork/)) par exemple en 2020-2021 il y a eu la mise à jour Taproot. 
-On pourrait alors se poser dans le cas suivant : nous avons déjà un noeud (qui potentiellement gère une pool) et qui doit se mettre à jour  en propageant la mise à jour sur toute la pool.
-Image
+Et ce qu’il peut se passer c’est une mise à jour (de type soft fork, [hard fork vs. soft fork](https://shardeum.org/blog/hard-fork-vs-soft-fork/))) par exemple en 2020-2021 il y a eu la mise à jour Taproot qui est un soft fork. 
+On pourrait alors se poser dans le cas suivant : nous avons déjà un noeud (qui potentiellement gère une pool) et qui doit se mettre à jour ,*Taproot*, en propageant la mise à jour sur toute la pool.
+
 
 
 ### Buts
