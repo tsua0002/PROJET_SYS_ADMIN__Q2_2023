@@ -30,6 +30,8 @@
 
 - [bitcoin.org/en/resources](https://bitcoin.org/en/resources)
 
+- [A beginner's guide to the Bitcoin Taproot upgrade](https://cointelegraph.com/bitcoin-for-beginners/a-beginners-guide-to-the-bitcoin-taproot-upgrade) : Un descriptif de la mise à jour avec un petit historique.
+
 
 ### Matériel
 
