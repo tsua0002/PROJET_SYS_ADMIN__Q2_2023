@@ -7,12 +7,12 @@
 
 - [Download Bitcoin Core](https://bitcoincore.org/bin/bitcoin-core-24.0.1/)
 - [A propos de bitcoincore](https://bitcoin.org/en/bitcoin-core/)
-- 
+
 
 ### bitcoin-cli
 
 - [bitcoin-cli playground](https://blog.sandipan.dev/bitcoin-cli-playground)
-- 
+
 
 ### GUI (Graphical User Interface)
 
