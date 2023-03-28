@@ -178,11 +178,14 @@ chercher des sources basiques.
 
 ## Community and Help
 [Getting Help — Varnish HTTP Cache](https://varnish-cache.org/support/index.html)
+
 [Discord Varnish Cache](https://discord.com/invite/EuwdvbZR6d)
 
 ## Business
 [Varnish HTTP Cache Business](https://varnish-cache.org/business/index.html)
+
 [Pricing | Varnish Software](https://www.varnish-software.com/pricing/)
+
 [API and Web Acceleration | Varnish Software](https://www.varnish-software.com/solutions/http-api-acceleration/)
 
 
