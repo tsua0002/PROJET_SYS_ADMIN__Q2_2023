@@ -25,7 +25,7 @@ Une fois le serveur setup il nous faut créer un fichier `vcl`
 (Varnish Configuration Language) proche du format JSON que 
 l'on peut initialiser comme suit : 
 
-```JSON
+```
 #default.vcl
 vcl 4.0 ;
 
@@ -72,7 +72,7 @@ Commencer par créer un dossier qui contiendra toutes les
 informations a propos de Caddy : `mkdir caddy && cd caddy`.
 
 Puis créer un fichier `Caddyfile` : 
-```JSON
+```
 myhost.ddns.net {
   proxy / 127.0.0.1 8080 
 }
@@ -171,7 +171,9 @@ chercher des sources basiques.
 
 ## Varnish Doc
 [Introduction to Varnish](https://varnish-cache.org/intro/index.html#intro)
+
 [The Varnish Tutorial — Varnish version 7.3.0 documentation](https://varnish-cache.org/docs/trunk/tutorial/)
+
 [Varnish HTTP Cache — Varnish HTTP Cache](https://varnish-cache.org/)
 
 ## Community and Help
