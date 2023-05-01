@@ -1,0 +1,5 @@
+cd c:\
+unzip nginx-1.13.8.zip
+cd nginx-1.13.8
+start nginx
+127.0.0.1
