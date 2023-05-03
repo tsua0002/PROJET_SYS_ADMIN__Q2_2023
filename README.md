@@ -27,4 +27,14 @@ chmod +x launch.sh
 Les différents rapports sont disponibles sur le dossier rapports en format tex et pdf.
 
 
+## Configuration fichier `/etc/hosts`
+
+1) Vérifier si la ligne `0.0.0.0 coursparticuliers.com www.coursparticuliers.com` y est déjà. Si elle y est il faut la supprimer avant de relancer le script `launch.sh`
+
+2) `0.0.0.0` est l'IP du serveur. Ici, en version test local, on peut simplement utiliser l'adresse nulle.
+
+3) Le nom de domaine doit être atteignable via cette IP sur les serveurs DNS. Autrement dit l'adresse IP doit être reliée au nom de domaine.
+
+
+
 
