@@ -1,4 +1,5 @@
 #! /usr/bin/bash
+
 echo "############  Update pat-packages  ##################";
 sudo apt-get update -y;
 
@@ -13,6 +14,9 @@ sudo cp ./html/ /var/www;
 # Replace nginx.conf file
 sudo rm /etc/nginx/nginx.conf;
 sudo cp ./nginx.conf /etc/nginx;
+
+# Add our domain name to hosts file
+sudo echo "0.0.0.0 CoursParticuliers.com www.CoursParticuliers.com" >> /etc/hosts;
 
 # Check that nginx config is ok
 echo "########## Check NGINX config  ##############";
