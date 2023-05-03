@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulaire de demande de cours particuliers</title>
+  <link rel="stylesheet" href="../style/styleForm.css">
+</head>
+<body>
+  <nav>
+    <a href="../index.html">Accueil</a>
+    <a href="#">Formulaire</a>
+    <a href="../page/contact.html">Contact</a>
+    <a href="../page/profile.html">Profil</a>
+    <a href="../page/about.html" class="active">À propos</a>
+  </nav>
+  
+  <main>
+    <section class="form-section">
+      <div class="container">
+        <h2>Formulaire de demande de cours particuliers</h2>
+        <form action="#" method="post">
+          <h3>Informations personnelles</h3>
+          <div class="form-group">
+            <label for="genre">Genre</label>
+            <select name="genre" id="genre">
+              <option value="homme">Homme</option>
+              <option value="femme">Femme</option>
+              <option value="non-binaire">Non-binaire</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="nom">Nom</label>
+            <input type="text" name="nom" id="nom" required>
+          </div>
+          <div class="form-group">
+            <label for="prenom">Prénom</label>
+            <input type="text" name="prenom" id="prenom" required>
+          </div>
+          <div class="form-group">
+            <label for="adresse">Adresse</label>
+            <textarea name="adresse" id="adresse" required></textarea>
+          </div>
+          <h3>Détails de la session de cours</h3>
+          <div class="form-group">
+            <label for="date-debut">Date de début</label>
+            <input type="date" name="date-debut" id="date-debut" required>
+          </div>
+          <div class="form-group">
+            <label for="date-fin">Date de fin</label>
+            <input type="date" name="date-fin" id="date-fin" required>
+          </div>
+          <div class="form-group">
+            <label for="heure-debut">Heure de début</label>
+            <input type="time" name="heure-debut" id="heure-debut" required>
+          </div>
+          <div class="form-group">
+            <label for="heure-fin">Heure de fin</label>
+            <input type="time" name="heure-fin" id="heure-fin" required>
+          </div>
+          <div class="form-group">
+            <label for="ville">Ville</label>
+            <input type="text" name="ville" id="ville" required>
+          </div>
+          <div class="form-group">
+            <label for="pays">Pays</label>
+            <input type="text" name="pays" id="pays" required>
+          </div>
+          <h3>Informations de contact</h3>
+          <div class="form-group">
+            <label for="telephone">Numéro de téléphone</label>
+            <input type="tel" name="telephone" id="telephone" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Adresse e-mail</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <h3>Profil</h3>
+        <div class="form-group">
+            <label for="profil">Êtes-vous un élève ou un professeur ?</label>
+        <div class="radio-group">
+            <label for="eleve">Élève</label>
+            <input type="radio" name="profil" id="eleve" value="eleve" required>
+            <label for="prof">Professeur</label>
+            <input type="radio" name="profil" id="prof" value="prof" required>
+        </div>
+        </div>
+        <h3>Paiement</h3>
+        <div class="form-group">
+        <label for="paiement">Moyen de paiement</label>
+        <select name="paiement" id="paiement" required>
+        <option value="carte">Carte de crédit</option>
+        <option value="paypal">PayPal</option>
+        <option value="virement">Virement bancaire</option>
+        </select>
+        </div>
+        <div class="form-group">
+        <input type="submit" value="Envoyer la demande">
+        </div>
+        </form>
+        </div>
+        </section>
+        
+          </main>
+          <footer>
+            <p>Tous droits réservés © 2023</p>
+          </footer>
+        </body>
+        </html>
