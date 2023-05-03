@@ -27,6 +27,7 @@ server {
 
 	location / {
 		expires 30d;
+		# Si aucun fichier n'est trouvé pour satisfaire la requête http la page d'erreur 404 not found est renvoyé au client
 		try_files $uri $uri/ =404;
 	}
 
