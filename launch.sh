@@ -1,5 +1,6 @@
 #! /usr/bin/bash
-sudo apt-get update -y
+echo "############  Update pat-packages  ##################";
+sudo apt-get update -y;
 
 # Installation nginx
 echo "############# Installation NGINX  ###################";
