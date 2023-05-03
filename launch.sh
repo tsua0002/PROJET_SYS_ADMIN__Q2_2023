@@ -8,8 +8,8 @@ echo "############# Installation NGINX  ###################";
 sudo apt install nginx;
 
 # Copy html in /var/www/html with replacing previous index
-sudo rm -r /var/www/html;
-sudo cp ./html/ /var/www;
+sudo mkdir /var/www/coursparticuliers;
+sudo cp ./html/* /var/www/coursparticuliers;
 
 # Replace nginx.conf file
 sudo rm /etc/nginx/nginx.conf;
