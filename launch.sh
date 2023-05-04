@@ -32,8 +32,8 @@ echo "########## Check NGINX config  ##############";
 sudo nginx -t;
 
 # Need to have test before start nginx but I don't know how
-echo "############# Stop NGINX if is already running ###############";
-systemctl stop nginx;
+#echo "############# Stop NGINX if is already running ###############";
+#systemctl stop nginx;
 
 echo "############ START NGINX 	####################";
 systemctl start nginx;
