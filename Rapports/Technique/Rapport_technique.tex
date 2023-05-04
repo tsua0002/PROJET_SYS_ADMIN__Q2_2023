@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[parfill]{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{listingsutf8}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fullpage}
+\usepackage{caption}
+\usepackage{tabto}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    basicstyle=\ttfamily,
+    commentstyle=\color{green},
+    keywordstyle=[1]\color{cyan},
+    keywordstyle=[2]\color{blue},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    breaklines=true,
+    tabsize=4,
+    morekeywords=[1]{git,cd,chmod},
+    morekeywords=[2]{https://github.com/tsua0002/PROJET_SYS_ADMIN__Q2_2023},
+}
+
+
+
+\title{Gestion de la memoire cache d'un serveur web}
+\author{Nom : Grari \hspace{0.25cm} - \hspace{0.25cm} Prénom : Mohammed Achraf\hspace{0.25cm}  - \hspace{0.25cm} Matricule : 000509902\\\\Nom : Suau\hspace{0.25cm} -\hspace{0.25cm} Prenom : Thomas \hspace{0.25cm}-\hspace{0.25cm} Matricule : 000580972\\\\Nom : Massondi\hspace{0.25cm} -\hspace{0.25cm} Prenom : Williame \hspace{0.25cm}-\hspace{0.25cm} Matricule : 000568610\\\\Nom :Nguemayem Kaze\hspace{0.25cm} -\hspace{0.25cm} Prenom : Lydie Nadia \hspace{0.25cm}-\hspace{0.25cm} Matricule : 000509851 \\\\Nom : Meghadio Gonzeu\hspace{0.25cm} -\hspace{0.25cm} Prenom : Cedric Jordan  \hspace{0.25cm}-\hspace{0.25cm} Matricule : 000564114}
+\date{}
+\begin{document}
+\maketitle\hrule
+
+  \begin{center}
+  \vspace{1.5 cm}
+    \includegraphics[width=0.6\textwidth]{logo.png}
+    \captionsetup{labelformat=empty}
+    \label{fig:0}
+  \end{center}
+  
+\newpage
+\tableofcontents
+\newpage
+
+
+\section{Introduction à NGINX}
+
+Dans l'optique de croissance de CoursParticuliers.com sur le web et des outils numériques nous pensons utile de vous fournir des détails techniques sur le fonctionnement de NGINX bien que nous n'utiliserons que la partie proxy cache et serveur de cet outil.
+
+L'utilisation la plus fréquente de NGINX est de le configurer comme un serveur Web classique pour servir des fichiers statiques et comme un proxy pour les requêtes dynamiques typiquement acheminées en utilisant une interface FastCGI vers un ou des serveurs applicatifs avec un mécanisme de répartition de charge.
+Il assure plusieurs tâches importantes pour que le site fonctionne bien et soit sécurisé.\\
+
+\begin{itemize}
+
+    \item Proxy inversé avec mise en cache : NGINX peut être utilisé pour faire en sorte que les demandes d'un utilisateur soient envoyées à différents serveurs web, puis stocker en mémoire les résultats pour que les futures demandes soient traitées plus rapidement.
+
+    \item IPv6 : NGINX peut comprendre et gérer les nouvelles adresses IP, qui vont remplacer les anciennes adresses IPv4 et permettent de connecter plus d'appareils à internet.
+    
+    \item Équilibrage de charge : NGINX peut s'assurer que les demandes des utilisateurs sont distribuées de manière égales entre plusieurs serveurs, pour éviter que certains ne soient surchargés et que le temps de réponse soit trop élevé.
+    
+    \item Support FastCGI avec mise en cache : NGINX peut communiquer avec des applications web pour récupérer des informations plus rapidement, puis stocker ces informations en mémoire pour que les futures demandes soient traitées plus rapidement.
+    
+    \item WebSockets : NGINX peut permettre une communication en temps réel entre un utilisateur et un serveur, ce qui est utile pour les chats en ligne, les jeux en ligne, etc.
+    
+    \item Gestion des fichiers statiques, des fichiers d'index et de l'indexation automatique : NGINX peut gérer différents types de fichiers, tels que les images, les pages web et les feuilles de style, et peut également aider à organiser les fichiers dans des dossiers pour que les utilisateurs puissent les trouver plus facilement. Cela peut se faire via l'usage de l'argument \texttt{location}. 
+    
+    \item TLS/SSL avec SNI : NGINX peut protéger les informations des utilisateurs en utilisant des protocoles de chiffrement pour que les données soient illisibles par les personnes mal intentionnées, et il peut également gérer plusieurs noms de domaine sur un même serveur pour économiser de l'espace et faciliter la maintenance.
+
+\end{itemize}
+
+NGINX est plus performant qu'Apache pour le traitement des requêtes de contenu statique. Il peut également servir de nombreux clients en même temps lors d'une charge élevée, ce qui en fait un excellent choix pour un site à fort trafic grâce à un système de worker. Là où Apache crée un processus par connexion, NGINX lance une série de workers qui vont chacun être capable de gérer de multiples connexions d'une manière non bloquante.
+
+La configuration de NGINX est morcelée en plusieurs fichiers pour une plus grande liberté de configuration pour chaque composants du serveur et se trouve dans le dossier \texttt{/etc/nginx}.
+
+\begin{enumerate}
+    \item \texttt{nginx.conf}, contient la configuration générale ;
+    \item \texttt{conf.d/*.conf} contient la configuration des différents serveurs ;
+    \item \texttt{sites-available/*.conf} contient les fichiers de configurations de tous nos serveurs web NGINX et \texttt{sites-enabled/*.conf} doit contenir les fichiers de configuration des sites actifs sur le serveur.
+    
+\end{enumerate}
+
+Suivant l'installation NGINX semble marcher sur tous les OS sans distinction. 
+
+
+
+\section{Instalation NGINX}
+
+Il faut git clone notre repo à l'adresse suivante : \url{https://github.com/tsua0002/PROJET\_SYS\_ADMIN\_\_Q2\_2023}
+
+Puis suivre la partie installation du \texttt{README}.
+
+\colorbox{gray!10}{\lstinline{git clone https://github.com/tsua0002/PROJET_SYS_ADMIN__Q2_2023}}
+
+
+\colorbox{gray!10}{\lstinline{cd PROJET_SYS_ADMIN__Q2_2023}}
+
+
+\colorbox{gray!10}{\lstinline{chmod +x launch.sh}}
+
+
+\colorbox{gray!10}{\lstinline{./launch.sh}}
+
+Notre serveur a comme Système d'exploitation : Linux.\\
+L'IP hôte a été configuré sur \texttt{0.0.0.0} avec notre nom de domaine \texttt{coursparticuliers.com} afin de tester notre configuration.
+En production, il nous suffira de remplacer \texttt{0.0.0.0} par l'IP du serveur.
+
+
+Pour plus de détails sur les configurations et le script de lancement, veuillez vous référez au commentaire dans les fichiers suivants \textbf{launch.sh}, \textbf{nginx.conf} et \textbf{coursparticuliers.com}.
+
+Le fichier \textbf{launch.sh} contient à la fois l'installation de NGNIX et son lancement.
+
+
+\section{Détails de notre configuration}
+
+\subsection{Notre configuration globale nginx.conf}
+
+Le serveur NGINX a été configuré pour héberger un site Web à l'aide du protocole HTTP sur le \textbf{port} 80. La directive "listen" a été utilisée pour définir le port et le protocole pour les connexions IPv4 et IPv6. La directive "server\_name" a été utilisée pour spécifier le nom de domaine pour le site Web. Le répertoire racine pour le site Web a été défini avec la directive "root".
+
+De plus, la directive "location" a été utilisée pour définir la durée de validité des fichiers en cache à 30 jours pour améliorer les performances du site.
+
+La configuration SSL a également été mise en place avec les protocoles TLSv1 à TLSv1.3 pris en charge et les ciphers préférés du serveur configurés avec la directive "ssl\_prefer\_server\_ciphers".
+
+Les journaux d'accès et d'erreur ont été définis pour le serveur NGINX avec les directives "access\_log" et "error\_log", respectivement. La compression gzip a été activée pour compresser les données transférées entre le serveur et les clients, réduisant ainsi le temps de réponse.
+
+Enfin, les configurations virtuelles de NGINX ont été incluses à l'aide de la directive "include" pour faciliter la gestion des sites Web multiples sur le serveur.
+
+En plus, de la configuration globale \texttt{/etc/nginx/nginx.conf} nous avons configuré le site web spécifiquement via \texttt{/etc/nginx/site-available/coursparticuliers.com}.
+
+\subsection{Nos choix de configuration pour le site web coursparticuliers.com}
+
+Pour le caching, notre problème initial, nous avons opté pour 30 jours.
+Notre site n'ayant pas pour vocation a être mis à jour régulièrement, nous pensons que ce temps de caching chez le client peut augmenter grandement l'efficacité et la réactivité du site. Cela afin d'éviter de futurs désagrément liés à un trafic trop important.
+
+Le bloc de configuration de la directive "location /" définit le comportement du serveur pour les requêtes qui commencent par "/". Le serveur tentera de servir le fichier demandé et, s'il ne peut pas le trouver, cherchera un répertoire portant le même nom que le fichier et tentera de servir le fichier "index.html" ou "index.htm" qu'il contient. Si le fichier ou le répertoire n'existe pas, le serveur renverra une erreur 404.
+
+Nous avons également fait le choix de ne pas implémenter de serveur proxy par soucis d'économie financière. (Dans le scénario l'accent à été mis sur le coût financier comme un critère important)
+
+\section{Commandes utiles}
+
+\begin{itemize}
+    \item \textbf{Arrêter NGINX} :  systemctl stop nginx
+    \item \textbf{Vérifier l'état de NGINX} :  systemctl status nginx
+    \item \textbf{Redémarrer NGINX} :  systemctl restart nginx
+    \item \textbf{Démarrer NGINX} :  systemctl start nginx
+\end{itemize}
+
+\section{Maintenances futures}
+
+
+Fichier de config principal du site /etc/ng inx/sites-enabled/coursparticuliers.com
+
+Si des ralentissements sont de nouveaux présents sur le site alors nous avons deux solutions : 
+\begin{enumerate}
+    \item Augmenter le temps de caching \texttt{expires} dans \texttt{location}
+    \item  Augmenter la gestion du nombre de connexion entrantes autorisées dans \texttt{worker\_connections}.
+\end{enumerate}
+
+Afin d'aider au mieux la maintenance future du site internet vous pourrez consulter cette référence qui présente différentes stratégies de caching qui peuvent être implémentée par la suite : \href{https://www.youtube.com/watch?v=L3VC0za4heY&source_ve_path=Mjg2NjY}{Stratégies de cache pour le web.}
+
+\end{document}
